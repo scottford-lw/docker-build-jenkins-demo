@@ -36,7 +36,7 @@ pipeline {
             }
             steps {
                 echo 'Running Lacework vulnerability scan'
-                sh "lacework vulnerability scan run index.docker.io $DOCKER_HUB/alpine-wordpress latest --poll --noninteractive --details"
+                sh "lacework vulnerability container scan index.docker.io $DOCKER_HUB/alpine-wordpress latest --poll --noninteractive --details"
             }
         }
     }
